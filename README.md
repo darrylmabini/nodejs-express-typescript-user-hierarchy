@@ -48,7 +48,7 @@ src/
 - **`app`** the main entrypoint.
 
 ## Task
-Come up with a function, for an arbitrary collection of roles and users, given a user Id returns a list of ALL their subordinates (i.e: including their subordinate's subordinates).
+Come up with a function, for an arbitrary collection of roles and users, given a user Id returns a list of ALL their subordinates (i.e: including their subordinate's subordinates). Please make sure you put some good effort in and produce good, clean, workable code - that's what we're looking for!
 
 ## Solution
 To list ALL the user's subordinates, I have a service called `UserService` and has a `getSubordinates` method. First I need to find the user role ID by calling `findById` in the `UserModel` object. After that I will check if there is a user found so that I can ensure that I can get the user role ID else I will just return 404 not found. Once I have the user role ID, I will then get all the roles under that user role ID. I can do this by calling a recursive function called `findChildrenById` in the `RoleModel` object. Now that I have the list of user roles, I can now simply call `findByRoles` in the `UserModel` object to return all the users that are included in the list of sub roles.
