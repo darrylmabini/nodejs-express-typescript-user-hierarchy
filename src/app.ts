@@ -25,9 +25,9 @@ export const App = () => {
     // start Express server
     Express.listen(Express.get('port'), () => {
         // tslint:disable-next-line:no-console
-        console.log(('  App is running at http://localhost:%d in %s mode'), Express.get('port'), Express.get('env'));
+        console.log(('> App is running at http://localhost:%d in %s mode'), Express.get('port'), Express.get('env'));
         // tslint:disable-next-line:no-console
-        console.log('  Press CTRL-C to stop\n');
+        console.log('> Press CTRL-C to stop\n');
     });
 };
 
