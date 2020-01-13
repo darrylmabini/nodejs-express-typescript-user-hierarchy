@@ -37,11 +37,10 @@ export const sendResponse = (
     payload: any,
 ) => {
     response.status(payload.code || 200);
-    const responsePayload = payload.payload !== undefined ? payload.payload : payload;
-    if (responsePayload instanceof Object) {
-        response.json(responsePayload);
+    if (payload instanceof Object) {
+        response.json(payload);
     } else {
-        response.end(responsePayload);
+        response.end(payload);
     }
 };
 
