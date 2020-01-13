@@ -5,25 +5,36 @@
 2. Port 3000 availability.
 
 ## Installation
-1. Install dependencies
+1. Clone the repository
+    ```console
+    git clone https://github.com/darrylmabini/nodejs-express-typescript-users-hierarchy.git
+    ```
+2. CD into the project directory
+    ```console
+    cd nodejs-express-typescript-users-hierarchy
+    ```
+3. Install dependencies
     ```console
     npm install
     ```
-2. Build the package
+4. Build the package
     ```console
     npm run build
     ```
-3. Start the application
+5. Start the application
     ```console
     npm run start
     ```
-4. Check user subordinates
+6. Check user subordinates
     - User #1 subordinates, http://localhost:3000/users/1/subordinates
     - User #2 subordinates, http://localhost:3000/users/2/subordinates
     - User #3 subordinates, http://localhost:3000/users/3/subordinates
     - User #4 subordinates, http://localhost:3000/users/4/subordinates
     - User #5 subordinates, http://localhost:3000/users/5/subordinates
     - Invalid user id subordinates, http://localhost:3000/users/100/subordinates
+7. Bonus functionalities
+    - Get all users^^, http://localhost:3000/users
+    - Get user by id^^, http://localhost:3000/users/1
 
 ## File Structure
 Javascript doesn't have standard options on putting things all together. That said this is the option based from the popular approaches online.

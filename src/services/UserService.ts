@@ -7,7 +7,7 @@ class UserService {
         return new Promise(async (resolve) => {
             try {
                 const users = await Users.all();
-                resolve(successResponse(users));
+                resolve(successResponse({ users }));
             } catch (e) {
                 resolve(rejectResponse(
                     e.message || 'Unknown error',
@@ -21,7 +21,7 @@ class UserService {
         return new Promise(async (resolve) => {
             try {
                 const user = await Users.findById(id);
-                resolve(successResponse(user));
+                resolve(successResponse({ user }));
             } catch (e) {
                 resolve(rejectResponse(
                     e.message || 'Unknown error',
