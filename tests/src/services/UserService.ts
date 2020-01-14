@@ -1,9 +1,9 @@
 import sinon from 'sinon';
 import { assert } from 'chai';
 
-import Users from '../../../src/models/UserModel';
-import Roles from '../../../src/models/RoleModel';
-import UserService from '../../../src/services/UserService';
+import Users from '../../../src/models/user.model';
+import Roles from '../../../src/models/role.model';
+import UserService from '../../../src/services/user.service';
 
 describe('UserService', function() {
     let findByIdStub;

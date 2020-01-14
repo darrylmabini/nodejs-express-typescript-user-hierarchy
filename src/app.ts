@@ -1,5 +1,3 @@
-import 'module-alias/register';
-
 import express, { Application, Request, Response, NextFunction, Router } from 'express';
 import bodyParser from 'body-parser';
 import createError from 'http-errors';

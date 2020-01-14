@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { handleRequest } from '@app';
+import { handleRequest } from '../app';
 
-import UserService from '@services/UserService';
+import UserService from '../services/user.service';
 
 class UsersController {
     static getSubordinates = async (request: Request, response: Response) => {
