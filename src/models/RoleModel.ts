@@ -28,15 +28,6 @@ const Roles: IRoles[] = [{
 
 export default (() => ({
     /**
-     * Returns collection of role.
-     */
-    all(): Promise<IRoles[]> {
-        return new Promise((resolve) => {
-            resolve(Roles);
-        });
-    },
-
-    /**
      * Finds and collect the children of the given role id,
      * then stops and return the collection of children roles
      * when a role does not have children.

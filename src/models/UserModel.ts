@@ -28,15 +28,6 @@ const Users: IUser[] = [{
 
 export default (() => ({
     /**
-     * Returns collection of user.
-     */
-    all(): Promise<IUser[]> {
-        return new Promise((resolve) => {
-            resolve(Users);
-        });
-    },
-
-    /**
      * Find user by ID
      *
      * @param id

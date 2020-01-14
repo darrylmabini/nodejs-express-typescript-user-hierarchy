@@ -32,9 +32,6 @@
     - User #4 subordinates, http://localhost:3000/users/4/subordinates
     - User #5 subordinates, http://localhost:3000/users/5/subordinates
     - Invalid user id subordinates, http://localhost:3000/users/100/subordinates
-7. Bonus functionalities
-    - Get all users^^, http://localhost:3000/users
-    - Get user by id^^, http://localhost:3000/users/1
 
 ## File Structure
 Javascript doesn't have standard options on putting things all together. That said this is the option based from the popular approaches online.
