@@ -61,6 +61,11 @@ src/
 - **`app.module`** is where we register the routes.
 - **`app`** the main entrypoint.
 
+## Architechture Diagram
+<p align="center">
+  <img src="./public/images/architechture-diagram.png" />
+</p>
+
 ## Task
 Come up with a function, for an arbitrary collection of roles and users, given a user Id returns a list of ALL their subordinates (i.e: including their subordinate's subordinates). Please make sure you put some good effort in and produce good, clean, workable code - that's what we're looking for!
 
