@@ -33,18 +33,24 @@
     - User #5 subordinates, http://localhost:3000/users/5/subordinates
     - Invalid user id subordinates, http://localhost:3000/users/100/subordinates
 
+## Running Test
+Make sure you already installed the dependencies.
+```console
+  npm run test
+```
+
 ## File Structure
 Javascript doesn't have standard options on putting things all together. That said this is the option based from the popular approaches online.
 ```
 src/
   controllers/
-    SampleController.ts
+    sample.controller.ts
   models/
-    SampleModel.ts
+    sample.model.ts
   routes/
-    sample.ts
+    samples.ts
   services/
-    SampleService.ts
+    sample.service.ts
   app.module.ts
   app.ts
 ```
