@@ -1,10 +1,10 @@
-interface IRoles {
+export interface IRole {
     Id: number;
     Name: string;
     Parent: number;
 }
 
-const Roles: IRoles[] = [{
+const Roles: IRole[] = [{
     Id: 1,
     Name: 'System Administrator',
     Parent: 0,
@@ -35,7 +35,7 @@ export default {
      * @param id
      * @param children
      */
-    findChildrenById(id: number, children: IRoles[] = []): Promise<IRoles[]|false> {
+    findChildrenById(id: number, children: IRole[] = []): Promise<IRole[]|false> {
         const roles = Roles.filter((role) => role.Parent === id);
         roles.forEach((role) => {
             children.push(role);

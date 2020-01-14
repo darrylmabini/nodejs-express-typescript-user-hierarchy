@@ -1,4 +1,4 @@
-import UsersRoutes from '@routes/users';
+import UsersRoutes from './routes/users';
 
 /**
  * Register routes
