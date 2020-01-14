@@ -6,7 +6,7 @@ import createError from 'http-errors';
 
 import { routes } from './app.module';
 
-export const App = () => {
+const AppServer = () => {
     const Express: Application = express();
     Express.set('port', 3000);
     Express.use(bodyParser.json());
@@ -89,4 +89,4 @@ export const successResponse = (
     return { ...data, code };
 };
 
-export default App();
+export default ['start', 'dev-start'].includes(process.env.npm_lifecycle_event || '') && AppServer();

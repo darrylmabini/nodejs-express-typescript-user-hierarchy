@@ -1,6 +1,7 @@
 import { successResponse, rejectResponse } from '@app';
-import Roles from '@models/RoleModel';
-import Users from '@models/UserModel';
+
+import Roles from '../models/RoleModel';
+import Users from '../models/UserModel';
 
 class UserService {
     static getSubordinates = async (id: number) => {
