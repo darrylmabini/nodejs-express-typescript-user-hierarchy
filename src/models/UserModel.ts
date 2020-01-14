@@ -26,7 +26,7 @@ const Users: IUser[] = [{
     Role: 5,
 }];
 
-export default (() => ({
+export default {
     /**
      * Find user by ID
      *
@@ -48,4 +48,4 @@ export default (() => ({
             resolve(Users.filter((user) => rids.indexOf(user.Role) !== -1));
         });
     },
-}))();
+};

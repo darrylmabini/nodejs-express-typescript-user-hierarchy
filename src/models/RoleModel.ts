@@ -26,7 +26,7 @@ const Roles: IRoles[] = [{
     Parent: 3,
 }];
 
-export default (() => ({
+export default {
     /**
      * Finds and collect the children of the given role id,
      * then stops and return the collection of children roles
@@ -45,4 +45,4 @@ export default (() => ({
             resolve(children || false);
         });
     },
-}))();
+};

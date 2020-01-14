@@ -3,7 +3,7 @@ import Roles from '@models/RoleModel';
 import Users from '@models/UserModel';
 
 class UserService {
-    public getSubordinates = async (id: number) => {
+    static getSubordinates = async (id: number) => {
         return new Promise(async (resolve) => {
             try {
                 const user = await Users.findById(id);
