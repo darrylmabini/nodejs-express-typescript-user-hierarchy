@@ -4,7 +4,7 @@ import { handleRequest } from '../app';
 import UserService from '../services/user.service';
 
 class UsersController {
-    static getSubordinates = async (request: Request, response: Response) => {
+    public static getSubordinates = async (request: Request, response: Response) => {
         await handleRequest(request, response, {
             title: 'Get subordinates',
             params: request.params,
