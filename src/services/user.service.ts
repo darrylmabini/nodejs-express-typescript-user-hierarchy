@@ -10,7 +10,7 @@ class UserService {
                 const user = await Users.findById(id);
                 if (user) {
                     const roles = await Roles.findChildrenById(user.Role);
-                    const subordinates = roles ? await Users.findByRoles(roles.map((role) => role.Id)) : [];
+                    const subordinates = await Users.findByRoles(roles.map((role) => role.Id));
                     resolve(successResponse({ subordinates }));
                 } else {
                     throw { message: 'Not found', status: 404 };

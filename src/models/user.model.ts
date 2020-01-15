@@ -33,9 +33,7 @@ export default {
      * @param id
      */
     findById(id: number): Promise<IUser|false> {
-        return new Promise((resolve) => {
-            resolve(Users.find((user) => user.Id === id) || false);
-        });
+        return Promise.resolve(Users.find((user) => user.Id === id) || false);
     },
 
     /**
@@ -44,8 +42,6 @@ export default {
      * @param rids
      */
     findByRoles(rids: number[]): Promise<IUser[]|[]> {
-        return new Promise((resolve) => {
-            resolve(Users.filter((user) => rids.indexOf(user.Role) !== -1));
-        });
+        return Promise.resolve(Users.filter((user) => rids.indexOf(user.Role) !== -1));
     },
 };

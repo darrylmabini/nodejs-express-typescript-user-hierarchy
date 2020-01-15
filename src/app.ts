@@ -5,25 +5,25 @@ import createError from 'http-errors';
 import { routes } from './app.module';
 
 const AppServer = () => {
-    const Express: Application = express();
-    Express.set('port', 3000);
-    Express.use(bodyParser.json());
-    Express.use(bodyParser.urlencoded({ extended: false }));
+    const app: Application = express();
+    app.set('port', 3000);
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
 
     // routes
     routes.forEach((route) => {
-        Express.use('/', route);
+        app.use('/', route);
     });
 
     // catch 404 and forward to error handler
-    Express.use((req: Request, res: Response, next: NextFunction) => {
+    app.use((req: Request, res: Response, next: NextFunction) => {
         next(createError(404));
     });
 
-    // start Express server
-    Express.listen(Express.get('port'), () => {
+    // start app server
+    app.listen(app.get('port'), () => {
         // tslint:disable-next-line:no-console
-        console.log(('> App is running at http://localhost:%d in %s mode'), Express.get('port'), Express.get('env'));
+        console.log(('> App is running at http://localhost:%d in %s mode'), app.get('port'), app.get('env'));
         // tslint:disable-next-line:no-console
         console.log('> Press CTRL-C to stop\n');
     });
