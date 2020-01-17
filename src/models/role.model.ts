@@ -35,14 +35,14 @@ export default {
      * @param id
      * @param children
      */
-    findChildrenById(id: number, children: IRole[] = []): Promise<IRole[]|false> {
-        const roles = Roles.filter((role) => role.Parent === id);
-        roles.forEach((role) => {
-            children.push(role);
-            this.findChildrenById(role.Id, children);
-        });
+    findChildrenById(id: number, children: IRole[] = []): Promise<IRole[]> {
         return new Promise((resolve) => {
-            resolve(children || false);
+            const roles = Roles.filter((role) => role.Parent === id);
+            roles.forEach((role) => {
+                children.push(role);
+                this.findChildrenById(role.Id, children);
+            });
+            resolve(children);
         });
     },
 };
